@@ -1,0 +1,10 @@
+import './js/refs';
+import './js/render-functions';
+import './js/handlers';
+import './js/artists-api';
+import './js/helpers';
+import './js/mobile-menu';
+import './js/feedback';
+import './js/feedback-modal';
+import './js/artists';
+import './js/artist-modal';

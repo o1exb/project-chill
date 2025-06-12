@@ -1,0 +1,216 @@
+.swiper {
+  margin-bottom: 16px;
+}
+
+.feedback-stars {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  height: 18.89px;
+  margin-bottom: 32px;
+}
+
+.star-container {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.star {
+  position: relative;
+  width: 20px;
+  height: 18.89px;
+  color: #764191;
+}
+
+.star-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  color: #fff;
+}
+
+.partial-star {
+  clip-path: polygon(
+    0 0,
+    var(--percent, 50%) 0,
+    var(--percent, 50%) 100%,
+    0 100%
+  );
+}
+
+.star svg {
+  width: 100%;
+  height: 100%;
+}
+
+.feedback-text {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  text-align: center;
+  max-width: 518px;
+  width: 100%;
+  margin: 0 auto 32px;
+}
+
+.feedback-author {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+}
+.swiper-wrapper {
+  padding-top: 64px;
+  margin-bottom: 16px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+  content: none;
+}
+
+.feedback-section .swiper-button-prev,
+.feedback-section .swiper-button-next {
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  background: transparent;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  z-index: 10;
+  transition: border-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.feedback-section .swiper-button-prev svg,
+.feedback-section .swiper-button-next svg {
+  fill: #fff;
+  width: 24px;
+  height: 24px;
+}
+
+.swiper-button-prev:is(:hover, :focus),
+.swiper-button-next:is(:hover, :focus) {
+  border-color: #764191;
+}
+
+.swiper-button-prev:is(:hover, :focus) svg,
+.swiper-button-next:is(:hover, :focus) svg {
+  fill: #764191;
+}
+
+.swiper-button-prev svg {
+  transition: fill 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.swiper .swiper-wrapper .swiper-pagination-fraction,
+.swiper .swiper-pagination-custom,
+.swiper .swiper-horizontal > .swiper-pagination-bullets,
+.swiper .swiper-pagination-bullets.swiper-pagination-horizontal {
+  position: static;
+}
+
+.swiper-pagination-bullet-active:is(:hover, :focus) {
+  background-color: #764191;
+}
+
+.swiper.swiper-initialized.swiper-horizontal {
+  --swiper-navigation-size: 0px;
+}
+.feedback-section .swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  opacity: 1 !important;
+}
+.feedback-section .swiper-pagination-bullet-active {
+  background-color: #fff !important;
+}
+
+.leave-feedback {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 64px;
+}
+
+@media screen and (min-width: 768px) {
+  .feedback-section .swiper-button-prev,
+  .feedback-section .swiper-button-next {
+    display: flex;
+  }
+  .feedback-text {
+    font-size: 26px;
+  }
+  .btn-leave-feedback {
+    width: 158px;
+    padding: 0px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .swiper {
+    margin-bottom: 80px;
+  }
+  .swiper-wrapper {
+    padding-top: 112px;
+  }
+  .feedback-section .swiper-button-prev,
+  .feedback-section .swiper-button-next {
+    top: 55%;
+    transform: translateY(-55%);
+  }
+  .leave-feedback {
+    padding-bottom: 112px;
+  }
+  .btn-leave-feedback {
+    width: 177px;
+  }
+}
+.feedback-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.feedback-btn {
+  background-color: #a76cdb;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 12px;
+  border: none;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  transition: background-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.feedback-btn:hover,
+.feedback-btn:focus {
+  background-color: #764191;
+}
+
+@media screen and (min-width: 768px) {
+  .feedback-btn {
+    border-radius: 12px;
+    padding: 10px 24px;
+    width: 177px;
+    height: 47px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

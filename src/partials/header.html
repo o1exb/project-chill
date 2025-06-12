@@ -1,19 +1,85 @@
 <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
+  <div class="container header-container">
+    <a class="logo-link" href="./index.html">
+      <svg class="logo-icon" width="106" height="30" aria-label="Logo">
+        <use href="./img/sprite.svg#icon-logo"></use>
+      </svg>
+    </a>
+    <button class="btn-burger-header" type="button">
+      <svg class="icon-burger" width="24" height="24" aria-label="Menu">
+        <use href="./img/sprite.svg#icon-menu-alt-right"></use>
+      </svg>
+    </button>
+
+    <nav class="nav-header">
+      <ul class="nav-list-header">
+        <li class="nav-item-header">
+          <a class="nav-link-header nav-link-menu" href="#artists-section"
+            >Artists</a
+          >
         </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
+        <li class="nav-item-header">
+          <a class="nav-link-header nav-link-menu" href="#about-section"
+            >About Us</a
+          >
+        </li>
+        <li class="nav-item-header">
+          <a class="nav-link-header nav-link-menu" href="#reviews-section"
+            >Reviews</a
+          >
         </li>
       </ul>
     </nav>
+
+    <div class="header-menu-container">
+      <div class="container container-menu">
+        <div class="menu-container-head">
+          <a class="logo-link" href="./index.html">
+            <svg class="logo-icon" width="106" height="30" aria-label="Logo">
+              <use href="./img/sprite.svg#icon-logo"></use>
+            </svg>
+          </a>
+          <button class="btn-close-header-menu" type="button">
+            <svg
+              class="icon-close"
+              width="24"
+              height="24"
+              aria-label="Menu-Close"
+            >
+              <use href="./img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+
+        <nav class="nav-list-menu">
+          <ul class="nav-list-header nav-list-header-menu">
+            <li class="nav-item-header">
+              <a
+                class="nav-link-header"
+                id="menu-anchor-artists"
+                href="#artists-section"
+                >Artists</a
+              >
+            </li>
+            <li class="nav-item-header">
+              <a
+                class="nav-link-header"
+                id="menu-anchor-about"
+                href="#about-section"
+                >About Us</a
+              >
+            </li>
+            <li class="nav-item-header">
+              <a
+                class="nav-link-header"
+                id="menu-anchor-reviews"
+                href="#reviews-section"
+                >Reviews</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </div>
 </header>
