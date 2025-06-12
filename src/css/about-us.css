@@ -1,4 +1,4 @@
-/* Mobile*/
+/* Mobile */
 .about {
   padding: 64px 0;
 }
@@ -33,7 +33,7 @@
   color: #fff;
 }
 
-/* Tablet */
+/* Tablet  */
 @media screen and (min-width: 768px) {
   .about-text {
     font-size: 20px;

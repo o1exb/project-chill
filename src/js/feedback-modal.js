@@ -47,6 +47,7 @@ function updateStars(rating) {
     }
   });
 }
+
 function openModal() {
   modalOverlay.classList.add('is-open');
 }

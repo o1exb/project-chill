@@ -2,7 +2,7 @@ import axios from 'axios';
 import izitoast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-const limit = 8;
+const limit = 8; // default limit for pagination
 
 const API_BASE_URL = 'https://sound-wave.b.goit.study/api';
 const API_ARTISTS_ENDPOINT = `/artists`;

@@ -1,7 +1,7 @@
 import { getArtists, getGenres } from './artists-api';
 import { renderArtistCards } from './render-functions';
 import { refs } from './refs';
-import svgArrowsBasePuth from '../img/sprite.svg';
+import svgArrowsBasePuth from '../img/sprite.svg?url';
 
 let currentPage = 1;
 let selectedGenre = '';
@@ -30,6 +30,7 @@ const searchAndFiltersOpener = document.querySelector(
 const filtersPanelForm = document.querySelector('.filters-panel');
 const scrollToTopBtn = document.querySelector('.scrollBtnUp');
 
+// --- Dropdown logic (only one open at a time) ---
 function closeAllDropdowns() {
   genreDropdown.classList.remove('open');
   sortingDropdown.classList.remove('open');
@@ -71,6 +72,7 @@ document.addEventListener('click', e => {
   }
 });
 
+// --- Show/hide filters panel on mobile ---
 searchAndFiltersOpener.addEventListener('click', () => {
   filtersPanelForm.classList.toggle('open');
   if (filtersPanelForm.classList.contains('open')) {
@@ -80,6 +82,7 @@ searchAndFiltersOpener.addEventListener('click', () => {
   }
 });
 
+// --- Genres from API ---
 async function populateGenres() {
   const genresData = await getGenres();
   if (!genresData?.length) return;
@@ -155,11 +158,13 @@ resetFiltersBtn.addEventListener('click', () => {
   fetchAndRenderArtists(true);
 });
 
+// --- Load More ---
 loadMoreBtn.addEventListener('click', () => {
   currentPage++;
   fetchAndRenderArtists();
 });
 
+// --- Main fetch/render ---
 async function fetchAndRenderArtists(clear = false) {
   loadMoreBtn.style.display = 'none';
   emptyState.classList.add('hidden');
@@ -193,7 +198,10 @@ async function fetchAndRenderArtists(clear = false) {
   spinner.classList.add('hidden');
 }
 
+// --- Initial load ---
 fetchAndRenderArtists(true);
+
+// --- Scroll to top button ---
 
 function handleToggleScrollToTopButton() {
   if (window.scrollY > (document.body.scrollHeight - window.innerHeight) / 2) {

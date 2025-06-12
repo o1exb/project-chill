@@ -77,11 +77,13 @@
   font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 400;
   font-size: 16px;
+
+  /* line-height: 24px; */
   line-height: 150%;
   color: #fff;
 }
 
-/* Tablet */
+/* Styles for Tablet devices */
 @media screen and (min-width: 768px) {
   .ftr-soc-container {
     flex-direction: row-reverse;
@@ -104,7 +106,7 @@
   }
 }
 
-/* Desktop  */
+/* Desktop */
 @media screen and (min-width: 1440px) {
   .ftr-soc-container {
     flex-direction: row-reverse;
