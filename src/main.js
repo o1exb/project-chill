@@ -6,5 +6,5 @@ import './js/helpers';
 import './js/mobile-menu';
 import './js/feedback';
 import './js/feedback-modal';
-import './js/artists';
+import './js/artists-section';
 import './js/artist-modal';

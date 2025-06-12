@@ -2,13 +2,15 @@
   padding-top: 64px;
   padding-bottom: 64px;
 }
-.artists-section-title {
+
+.artists-small-title {
+  display: block;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
-  color: #fff;
   margin-bottom: 16px;
 }
+
 .artists-section-subtitle {
   font-weight: 700;
   font-size: 44px;

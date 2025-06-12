@@ -1,5 +1,8 @@
+.feedback-section {
+  padding: 64px 0px;
+}
 .swiper {
-  margin-bottom: 16px;
+  position: relative;
 }
 
 .feedback-stars {
@@ -61,9 +64,6 @@
   font-size: 18px;
   line-height: 1.5;
   text-align: center;
-}
-.swiper-wrapper {
-  padding-top: 64px;
   margin-bottom: 16px;
 }
 
@@ -83,8 +83,8 @@
   display: none;
   align-items: center;
   justify-content: center;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 45%;
+  transform: translateY(-45%);
   position: absolute;
   z-index: 10;
   transition: border-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -96,6 +96,12 @@
   width: 24px;
   height: 24px;
 }
+.swiper-button-prev.disabled,
+.swiper-button-next.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+  cursor: default;
+}
 
 .swiper-button-prev:is(:hover, :focus),
 .swiper-button-next:is(:hover, :focus) {
@@ -106,38 +112,58 @@
 .swiper-button-next:is(:hover, :focus) svg {
   fill: #764191;
 }
+.feedback-section .swiper-button-prev {
+  left: 0;
+}
 
+.feedback-section .swiper-button-next {
+  right: 0;
+}
 .swiper-button-prev svg {
   transition: fill 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.swiper .swiper-wrapper .swiper-pagination-fraction,
-.swiper .swiper-pagination-custom,
-.swiper .swiper-horizontal > .swiper-pagination-bullets,
-.swiper .swiper-pagination-bullets.swiper-pagination-horizontal {
-  position: static;
-}
-
-.swiper-pagination-bullet-active:is(:hover, :focus) {
-  background-color: #764191;
-}
-
-.swiper.swiper-initialized.swiper-horizontal {
-  --swiper-navigation-size: 0px;
-}
-.feedback-section .swiper-pagination-bullet {
-  background-color: rgba(255, 255, 255, 0.2) !important;
-  opacity: 1 !important;
-}
-.feedback-section .swiper-pagination-bullet-active {
-  background-color: #fff !important;
-}
-
-.leave-feedback {
+.swiper-pagination {
   display: flex;
   justify-content: center;
+  gap: 9px;
+  margin: 0 auto 16px;
+  position: static !important;
+}
+
+.swiper-pagination-bullet {
+  width: 9px !important;
+  height: 9px !important;
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  opacity: 1 !important;
+  cursor: pointer;
+}
+.swiper-pagination-bullet.active {
+  background: #fff !important;
+}
+
+.feedback-btn {
+  display: flex;
   align-items: center;
-  padding-bottom: 64px;
+  justify-content: center;
+  margin: auto;
+  background-color: #a76cdb;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 12px;
+  padding: 10px 24px;
+  height: 47px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 18px;
+  transition: background-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.feedback-btn:hover,
+.feedback-btn:focus {
+  background-color: #764191;
 }
 
 @media screen and (min-width: 768px) {
@@ -148,15 +174,15 @@
   .feedback-text {
     font-size: 26px;
   }
-  .btn-leave-feedback {
-    width: 158px;
+  .feedback-btn {
     padding: 0px;
+    width: 158px;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .swiper {
-    margin-bottom: 80px;
+  .feedback-section {
+    padding: 112px 0px;
   }
   .swiper-wrapper {
     padding-top: 112px;
@@ -166,51 +192,10 @@
     top: 55%;
     transform: translateY(-55%);
   }
-  .leave-feedback {
-    padding-bottom: 112px;
+  .swiper-pagination {
+    margin: 0 auto 80px;
   }
-  .btn-leave-feedback {
-    width: 177px;
-  }
-}
-.feedback-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.feedback-btn {
-  background-color: #a76cdb;
-  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2);
-  color: white;
-  padding: 12px;
-  border: none;
-  width: 100%;
-  border-radius: 10px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 150%;
-  transition: background-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.feedback-btn:hover,
-.feedback-btn:focus {
-  background-color: #764191;
-}
-
-@media screen and (min-width: 768px) {
   .feedback-btn {
-    border-radius: 12px;
-    padding: 10px 24px;
     width: 177px;
-    height: 47px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
   }
 }

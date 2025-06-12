@@ -1,4 +1,5 @@
 .artists-layout {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -17,22 +18,6 @@
   margin-bottom: 32px;
 }
 
-.artists-small-title {
-  display: block;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 16px;
-}
-
-.artists-section-title {
-  font-size: 40px;
-  font-weight: 700;
-  color: #fff;
-  line-height: 1.2;
-  margin: 0;
-}
-
 .icon-chevron {
   fill: #fff;
 }
@@ -42,9 +27,15 @@
   transition: fill 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.icon-search:hover,
-.icon-search:focus {
+.search-button:hover .icon-search,
+.search-button:focus .icon-search {
   fill: #764191;
+}
+
+.search-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
 }
 
 .filters-panel {
@@ -181,6 +172,7 @@
   padding: 10px 14px;
   cursor: pointer;
   font-size: 14px;
+  background-color: #1e1c1f;
 }
 
 .dropdown-item:hover {
@@ -309,6 +301,10 @@
     display: none;
   }
 
+  .dropdown-item {
+    background-color: #060307;
+  }
+
   .search-and-filters-opener {
     display: none;
   }
@@ -393,4 +389,57 @@
   .custom-dropdown-menu {
     background-color: #060307;
   }
+}
+
+.scrollBtnUp {
+  position: fixed;
+  bottom: 9%;
+  right: 5%;
+  z-index: 1000;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #764191 60%, #a855f7 100%);
+  border: none;
+  box-shadow: 0 8px 24px 0 rgba(118, 65, 145, 0.25), 0 1.5px 6px 0 #a855f7;
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.2s;
+  animation: scrollBtnJump 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.scrollBtnUp:hover,
+.scrollBtnUp:focus {
+  box-shadow: 0 12px 32px 0 rgba(168, 85, 247, 0.35), 0 2px 8px 0 #764191;
+  transform: scale(1.08);
+}
+
+.scrollBtnUp .icon-scroll-up {
+  width: 44px;
+  height: 44px;
+  fill: #fff;
+  filter: drop-shadow(0 2px 8px #a855f7aa);
+  transition: fill 0.2s;
+}
+
+@keyframes scrollBtnJump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(-10px) scale(1.08);
+  }
+  20% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.visible-scrollBtn {
+  display: flex;
 }

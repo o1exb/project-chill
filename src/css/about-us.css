@@ -1,4 +1,4 @@
-/* MOBILE */
+/* Mobile*/
 .about {
   padding: 64px 0;
 }
@@ -33,7 +33,7 @@
   color: #fff;
 }
 
-/* TABLET */
+/* Tablet */
 @media screen and (min-width: 768px) {
   .about-text {
     font-size: 20px;
@@ -54,8 +54,11 @@
   }
 }
 
-/* DESKTOP */
+/* Desktop */
 @media screen and (min-width: 1440px) {
+  .about {
+    padding: 112px 0;
+  }
   .about-container {
     display: flex;
     align-items: center;
@@ -64,6 +67,7 @@
   .about-img-wrapper {
     margin-bottom: 0;
     width: 100%;
+
     max-width: 640px;
   }
   .about-content-logo {

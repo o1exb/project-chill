@@ -11,13 +11,14 @@
 }
 
 body {
-  padding-top: 64px; /* Adjust to match header height */
+  padding-top: 64px;
 }
 
 .header-container {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  width: 100%;
 }
 
 @media screen and (max-width: 767px) {

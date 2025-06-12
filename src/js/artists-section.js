@@ -1,7 +1,7 @@
 import { getArtists, getGenres } from './artists-api';
 import { renderArtistCards } from './render-functions';
 import { refs } from './refs';
-import svgArrowsBasePuth from '../img/sprite.svg?url';
+import svgArrowsBasePuth from '../img/sprite.svg';
 
 let currentPage = 1;
 let selectedGenre = '';
@@ -80,7 +80,6 @@ searchAndFiltersOpener.addEventListener('click', () => {
   }
 });
 
-// --- Genres from API ---
 async function populateGenres() {
   const genresData = await getGenres();
   if (!genresData?.length) return;

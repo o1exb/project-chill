@@ -1,8 +1,8 @@
 <section class="artists-section" id="artists-section">
   <div class="container">
     <div class="artists-header">
-      <span class="artists-small-title">Artists</span>
-      <h2 class="artists-section-title">Explore Your New Favorite Artists</h2>
+      <h2 class="artists-small-title">Artists</h2>
+      <p class="artists-section-subtitle">Explore Your New Favorite Artists</p>
     </div>
 
     <div class="artists-layout">
@@ -15,16 +15,18 @@
               <use href="./img/sprite.svg#icon-chevron-up-arrow"></use>
             </svg>
           </div>
-          <aside class="filters-panel">
+          <form class="filters-panel">
             <div class="filters-header">
               <h3>Filters</h3>
               <button id="resetBtn">Reset</button>
             </div>
 
             <div class="wrapper-search">
-              <svg class="icon-search" width="24" height="24">
-                <use href="./img/sprite.svg#icon-search"></use>
-              </svg>
+              <button type="submit" id="searchBtn" class="search-button">
+                <svg class="icon-search" width="24" height="24">
+                  <use href="./img/sprite.svg#icon-search"></use>
+                </svg>
+              </button>
               <input type="text" id="searchInput" placeholder="Search" />
             </div>
 
@@ -51,7 +53,7 @@
               </div>
               <div class="custom-dropdown-menu" id="genreList"></div>
             </div>
-          </aside>
+          </form>
         </div>
       </div>
 
@@ -80,6 +82,11 @@
           </svg>
         </button>
       </div>
+      <button class="scrollBtnUp" type="button">
+        <svg class="icon-scroll-up" width="24" height="24">
+          <use href="./img/sprite.svg#icon-scroll-up"></use>
+        </svg>
+      </button>
     </div>
   </div>
 </section>
