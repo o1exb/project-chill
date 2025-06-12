@@ -2,9 +2,11 @@ import { glob } from 'glob';
 import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
 import SortCss from 'postcss-sort-media-queries';
+import { defineConfig } from 'vite';
 
 export default defineConfig(({ command }) => {
   return {
+    base: '/project-chill/', // ✅ Add it here
     define: {
       [command === 'serve' ? 'global' : '_global']: {},
     },
