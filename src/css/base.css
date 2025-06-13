@@ -1,3 +1,4 @@
+
 body {
   font-family: 'Inter', sans-serif;
   font-size: 18px;
@@ -34,3 +35,4 @@ body.modal-open {
   max-height: 80vh; /* або інше значення по висоті */
   overflow: hidden;
 }
+

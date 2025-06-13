@@ -1,3 +1,4 @@
+
 import './js/refs';
 import './js/render-functions';
 import './js/handlers';
@@ -10,3 +11,4 @@ import './js/artists-section';
 import './js/artist-modal';
 import 'modern-normalize/modern-normalize.css';
 import 'resize-observer-polyfill';
+
