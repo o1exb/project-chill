@@ -1,5 +1,5 @@
 body {
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 18px;
   font-weight: 400;
   min-width: 100vw;
@@ -26,7 +26,11 @@ html {
   scroll-behavior: smooth;
 }
 
-html,
-body {
-  overflow-x: hidden;
+body.modal-open {
+  overflow: hidden;
+}
+
+.modal-overlay[data-simplebar] {
+  max-height: 80vh; /* або інше значення по висоті */
+  overflow: hidden;
 }

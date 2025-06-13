@@ -1,7 +1,7 @@
 /* Mobile */
-.about {
+/* .about {
   padding: 64px 0;
-}
+} */
 .about-img-wrapper {
   margin-bottom: 48px;
   max-width: 280px;
@@ -56,9 +56,9 @@
 
 /* Desktop */
 @media screen and (min-width: 1440px) {
-  .about {
+  /* .about {
     padding: 112px 0;
-  }
+  } */
   .about-container {
     display: flex;
     align-items: center;

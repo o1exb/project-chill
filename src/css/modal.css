@@ -1,5 +1,9 @@
 @import './utils/loader.css';
 
+.modal-overlay {
+  max-height: 80vh; /* або конкретна висота, наприклад 500px */
+  overflow: hidden;
+}
 h4 {
   font-weight: 600;
   font-size: 18px;
@@ -156,7 +160,7 @@ h4 {
   color: #fff;
   border-radius: 6px;
   font-size: 0.9em;
-  white-space: nowrap; /* Запобігає розриву тексту тега */
+  white-space: nowrap;
   width: fit-content;
   cursor: default;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -180,7 +184,7 @@ h4 {
 
 /* Трек (фон скролбару) */
 ::-webkit-scrollbar-track {
-  background: #060307; /* Колір фону треку */
+  background: #060307; /* Колір фону 
   border-radius: 8px; /* Закруглені кути треку */
 }
 

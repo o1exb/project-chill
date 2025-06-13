@@ -8,3 +8,5 @@ import './js/feedback';
 import './js/feedback-modal';
 import './js/artists-section';
 import './js/artist-modal';
+import 'modern-normalize/modern-normalize.css';
+import 'resize-observer-polyfill';

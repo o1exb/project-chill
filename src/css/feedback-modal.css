@@ -218,3 +218,8 @@ body.no-scroll {
     box-shadow: 32px 0 #fff, -32px 0 #fff2;
   }
 }
+
+.modal-bio {
+  max-height: 300px;
+  overflow-y: auto;
+}
